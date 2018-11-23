@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="MVP_Tests" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X1V-S5-3fJ">
+                                <rect key="frame" x="36" y="56" width="303" height="260"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="gmo-lh-YgP"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q82-E1-Vzf">
+                                <rect key="frame" x="36" y="353" width="303" height="44"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="Buy">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0UP-0d-vqz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xp4-ck-F80">
+                                <rect key="frame" x="36" y="446" width="303" height="44"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="Sell">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="sellButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VCQ-8L-wQV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.65236541285997895" blue="0.27688486306806182" alpha="0.89904269366197187" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Q82-E1-Vzf" firstAttribute="width" secondItem="X1V-S5-3fJ" secondAttribute="width" id="G60-a1-Bwa"/>
+                            <constraint firstItem="Q82-E1-Vzf" firstAttribute="top" secondItem="X1V-S5-3fJ" secondAttribute="bottom" constant="37" id="MXp-qa-7Hh"/>
+                            <constraint firstItem="X1V-S5-3fJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="OhW-x8-xzY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X1V-S5-3fJ" secondAttribute="trailing" constant="36" id="foQ-P4-CKJ"/>
+                            <constraint firstItem="Q82-E1-Vzf" firstAttribute="leading" secondItem="X1V-S5-3fJ" secondAttribute="leading" id="hWU-ve-py3"/>
+                            <constraint firstItem="X1V-S5-3fJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="hhs-Ul-zmY"/>
+                            <constraint firstItem="xp4-ck-F80" firstAttribute="top" secondItem="Q82-E1-Vzf" secondAttribute="bottom" constant="49" id="pno-P4-bTQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="Q82-E1-Vzf" id="1We-VF-nWw"/>
+                        <outlet property="image" destination="X1V-S5-3fJ" id="QvA-Js-RhC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-444" y="61"/>
+        </scene>
+        <!--Buy View Controller-->
+        <scene sceneID="DNx-oA-FtW">
+            <objects>
+                <viewController storyboardIdentifier="BuyViewController" id="Wni-fI-2ZF" customClass="BuyViewController" customModule="MVP_Tests" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="msa-ny-Ndn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0og-CD-sNw">
+                                <rect key="frame" x="145.5" y="314" width="84" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Vai Porra"/>
+                                <connections>
+                                    <action selector="vaiPorraButton:" destination="Wni-fI-2ZF" eventType="touchUpInside" id="uDn-N9-kVF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.28306049379999998" blue="0.35102382100000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="0og-CD-sNw" firstAttribute="centerY" secondItem="msa-ny-Ndn" secondAttribute="centerY" id="63C-db-7wx"/>
+                            <constraint firstItem="0og-CD-sNw" firstAttribute="centerX" secondItem="msa-ny-Ndn" secondAttribute="centerX" id="QmZ-ah-VMK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Pmj-5T-ryD"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8tO-6m-WCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406" y="61"/>
+        </scene>
+        <!--Sell View Controller-->
+        <scene sceneID="OfN-Yb-gKk">
+            <objects>
+                <viewController storyboardIdentifier="SellViewController" id="eWY-p7-1mF" customClass="SellViewController" customModule="MVP_Tests" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XXl-ix-amC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ON7-M5-DLI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Lp-Kh-tzS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1233" y="61"/>
+        </scene>
+    </scenes>
+</document>
